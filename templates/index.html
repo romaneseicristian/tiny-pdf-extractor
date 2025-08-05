@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDF Summarizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📄 PDF Summarizer</h1>
+    <input type="file" id="pdfInput" accept=".pdf" />
+    <div class="file-name" id="fileName"></div>
+    <button onclick="summarizePDF()">Summarize</button>
+    <div class="summary" id="summaryOutput"><pre>Your summary will appear here...</pre></div>
+  </div>
+
+  <script>
+  const pdfInput = document.getElementById('pdfInput');
+  const fileName = document.getElementById('fileName');
+  const summaryOutput = document.getElementById('summaryOutput');
+
+  pdfInput.addEventListener('change', () => {
+    fileName.textContent = `📂 File Name: ${pdfInput.files[0].name}`;
+  });
+
+  async function summarizePDF() {
+    const file = pdfInput.files[0];
+    if (!file) {
+      summaryOutput.innerHTML = "<pre>Please select a PDF file first.</pre>";
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("pdf", file);
+
+    summaryOutput.textContent = "⏳ Summarizing...";
+
+    try {
+      const response = await fetch("/summarize", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+      summaryOutput.textContent = data.summary || "No summary returned.";
+    } catch (error) {
+      summaryOutput.textContent = "❌ Error summarizing PDF.";
+      console.error(error);
+    }
+  }
+</script>
+
+</body>
+</html>
