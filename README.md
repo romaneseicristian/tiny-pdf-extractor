@@ -1,10 +1,10 @@
 # tiny-pdf-extractor
 This is a personal project I started to build a simple PDF summarizer using Python. The idea is to let users upload a PDF and get a quick summary of its contents. Eventually, I want to make it available online through GitHub Pages, so anyone can use it without installing anything.
-I’m still learning Python, so some parts of this have been a bit tricky—but I’m figuring things out step by step.
+I’m still learning Python, so some parts of this have been a bit tricky but I’m figuring things out step by step.
 
 What’s Working
 - I’ve set up a Python environment (3.12.1) and installed the PyPDF2 library, which lets me extract text from PDF files.
-- The basic summarizer script works when run in the correct environment—it can read a PDF and generate a summary.
+- The basic summarizer script works when run in the correct environment it can read a PDF and generate a summary.
 - I’ve written documentation and started organizing the project so it’s easier to follow.
 
 What’s Not Working (Yet)
@@ -13,10 +13,10 @@ What’s Not Working (Yet)
 - Text formatting: Some PDFs mash lines together when extracted, which makes the summaries messy. I’ll need to add some logic to clean up the text before summarizing. But this is veeeeeery tricky for me, I could use copilot but it ruins the purpose, so I will try to figure it out on my own using various forums or overflow.
 
 Hosting Plans
-Since GitHub Pages only supports static content, I’ll need to host the Python backend somewhere else—like Replit, Render, or Hugging Face Spaces. The plan is:
+Since GitHub Pages only supports static content, I’ll need to host the Python backend somewhere else like Replit, Render, or Hugging Face Spaces. The plan is:
 - Host the frontend (HTML/JS) on GitHub Pages.
 - Host the backend (Python summarizer) on a platform that supports Python.
 - Connect the two via API calls so users can upload PDFs and get summaries directly from the browser.
 
 Why This Project Matters to Me
-I’m doing this mostly to learn—Python, Git, GitHub Actions, and how to build something that actually works online. I’ve hit a few bumps, but each one’s been a chance to understand things better. This project is still in progress, and I’ll keep updating it as I go.(hopefully)
+I’m doing this mostly to learn Python, Git, GitHub Actions, and how to build something that actually works online. I’ve hit a few bumps, but each one’s been a chance to understand things better. This project is still in progress, and I’ll keep updating it as I go.(hopefully)
