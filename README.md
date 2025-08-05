@@ -10,7 +10,7 @@ What’s Working
 What’s Not Working (Yet)
 - Python version conflict: I accidentally ran the script using Python 3.13.5, but PyPDF2 was installed in 3.12.1. This caused a ModuleNotFoundError. I haven’t resolved this yet, but I plan to either install the library in 3.13.5 or switch the interpreter.
 - Submodule issues: The summarizer depends on a submodule called PDF-Extract-Kit. I originally pointed it to a repo under my own username, which doesn’t exist. That caused GitHub Actions to fail during builds. I’ve now fixed the reference to point to the correct repo: opendatalab/PDF-Extract-Kit.
-- Text formatting: Some PDFs mash lines together when extracted, which makes the summaries messy. I’ll need to add some logic to clean up the text before summarizing.
+- Text formatting: Some PDFs mash lines together when extracted, which makes the summaries messy. I’ll need to add some logic to clean up the text before summarizing. But this is veeeeeery tricky for me, I could use copilot but it ruins the purpose, so I will try to figure it out on my own using various forums or overflow.
 
 Hosting Plans
 Since GitHub Pages only supports static content, I’ll need to host the Python backend somewhere else—like Replit, Render, or Hugging Face Spaces. The plan is:
@@ -19,4 +19,4 @@ Since GitHub Pages only supports static content, I’ll need to host the Python 
 - Connect the two via API calls so users can upload PDFs and get summaries directly from the browser.
 
 Why This Project Matters to Me
-I’m doing this mostly to learn—Python, Git, GitHub Actions, and how to build something that actually works online. I’ve hit a few bumps, but each one’s been a chance to understand things better. This project is still in progress, and I’ll keep updating it as I go.
+I’m doing this mostly to learn—Python, Git, GitHub Actions, and how to build something that actually works online. I’ve hit a few bumps, but each one’s been a chance to understand things better. This project is still in progress, and I’ll keep updating it as I go.(hopefully)
