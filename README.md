@@ -20,3 +20,16 @@ Since GitHub Pages only supports static content, I’ll need to host the Python 
 
 Why This Project Matters to Me
 I’m doing this mostly to learn Python, Git, GitHub Actions, and how to build something that actually works online. I’ve hit a few bumps, but each one’s been a chance to understand things better. This project is still in progress, and I’ll keep updating it as I go.(hopefully)
+
+How to Run This Locally
+If you want to try the summarizer on your own machine, here’s how:
+- Clone the repository (including the submodule):
+git clone --recurse-submodules https://github.com/romaneseicristian/pdf-summarizer.git
+- Install Python dependencies: Make sure you’re using Python 3.12 or 3.13, then run:
+pip install PyPDF2
+- Run the script: You can test it by running the main Python file (e.g., main.py) and passing in a PDF file.
+- Optional: If you want to modify or explore the submodule (PDF-Extract-Kit), it’s located in the project folder and can be updated with:
+git submodule update --remote
+
+
+Note: If you run into version issues, make sure your Python interpreter matches the one where PyPDF2 is installed.
